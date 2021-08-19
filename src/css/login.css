@@ -1,0 +1,147 @@
+.navbar{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    
+}
+
+.logo{
+    margin-left: 30px;
+   
+    
+    display: flex;
+    
+}
+.logo h1{
+    font-size: 15px;
+    margin-left: 8px;
+    font-family:"Rubik", sans-serif;
+}
+
+
+.action-login {
+    color: #6A4029;
+    font-weight: 700;
+    font-size: 25px;
+    margin-right: 30px; 
+}
+.title{
+    text-align: center;
+    justify-content: center;
+    margin-top: 80px;
+    color: #6A4029;
+    font-weight: 700;
+    font-size: 30px; 
+    margin-left: 0px; 
+}
+.form{
+    margin-top: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family:"Rubik", sans-serif;
+}
+.form .input_email h1{
+    font-size: 15px;
+    line-height: 24px; 
+    color: #4F5665;
+    
+}
+.form .input_email input{
+   
+    height: 55px;
+   
+    padding-left: 15px;
+    background: #FFFFFF;
+    border: 1px solid #4F5665;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.form .password h1{
+    font-size: 15px;
+    line-height: 24px; 
+    color: #4F5665;
+}
+.form .password input{
+   
+    height: 55px;
+    
+    padding-left: 15px;
+    background: #FFFFFF;
+    border: 1px solid #4F5665;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.form .forgot_password h1{
+    font-size: 15px;
+    line-height: 24px; 
+    color: #6A4029;
+    text-decoration: underline;
+}
+
+.action{
+    margin-top: 50px;
+    margin-left: 30%;
+}
+.btn{
+    margin-left: 10px;
+    height: 55px;
+    margin-top: 20px;
+    padding-left: 15px;
+    border-radius: 15px;
+    background: #FFBA33;
+    box-shadow: 0px 6px 20px rgba(255, 186, 51, 0.4);
+    font-weight: 700;
+    font-size: 20px;
+    border-style: none;
+    font-family:"Rubik", sans-serif;
+    color: #6A4029;
+}
+.action .action-login{
+    margin-top: 30px;
+
+}
+.google {
+    
+    margin-top: 30px;
+    height: 55px;
+    margin-left: 10px;
+    padding-left: 15px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 20px rgba(196, 196, 196, 0.67);
+    border-style: none;
+    
+}
+.action .button_google button img{
+    padding-right: 10px;
+    border-radius: 30px;
+}
+.google {
+    font-weight: 700;
+    font-size: 17px;
+    font-family:"Rubik", sans-serif;
+    color: black;
+}
+.google img{
+    padding-right: 10px;
+}
+.dont{
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    text-decoration-color: none;
+    color: #9F9F9F;
+    
+}
+.signbtn{
+    background: #6A4029;
+    color: white;
+    margin-bottom: 55px;
+
+}
+@media screen and (max-width: 768px){
+    .img{
+        display: none;
+    }
+}

@@ -1,0 +1,166 @@
+main{
+    padding: 0px;
+    margin: 0px;
+     display: flex;
+     width: 100%;
+ }
+ .maincontent .jumbotron{
+     
+     width: 100%;
+     background-size: cover;
+     background-image: url("https://s3-alpha-sig.figma.com/img/57c5/d504/de26c540ca74fd712a0e636cd4cdc0fb?Expires=1629676800&Signature=gsNBh2CLemryjV0MAbjJqr1Dyc901OhZnnyOrwN8V2xlmC4rKcpu0LVKssQT28GFkYIyBAx5jOcH6YP06YUqf8ECbvomz1pfdHTsGwnALSkT09wmZOIbWRWawsEKJ6~Z0zkjGFKdJ1UPhogbIdzLDZSpNwG8L1IAxm0cmTHgl9qnS3394fj5YkGouvX6cRoHyWyMEoIZUV-gc9bYW-9P~URarhHAnIiqV0HUHDi7m0repkcvy6k8Ri-xOCj8NJoy8E5yB0OIbov733x5X9wWbmK0KEMdnDdvEoknAVOFkf6c8SKXr78uy0-9rBYudbB-4CkoPJSTEa5IZXJ462tZvA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+ }
+ .maincontent .jumbotron h1{
+     width: 40%;
+     margin-left: 150px;
+     color: white;
+     font-size: 45px;
+     
+     font-weight: 700;
+     padding-top: 78px;
+ }
+ .maincontent .jumbotron p{
+     width: 40%;
+     margin-left: 150px;
+     color: white;
+     font-size: 20px;
+     font-style: normal;
+     font-family: 'Rubik', sans-serif;  
+ }
+ .maincontent .jumbotron button{
+     width: 300px;
+     height: 65px;
+     
+     top: 309px;
+     padding-left: 15px;
+     border-radius: 15px;
+     background: #FFBA33;
+     box-shadow: 0px 6px 20px rgba(255, 186, 51, 0.4);
+     font-weight: 700;
+     font-size: 20px;
+     border-style: none;
+     font-family:"Rubik", sans-serif;
+     color: #6A4029;
+     margin-left: 150px;
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }
+ .container-fluid{
+     display: flex;
+     flex-direction: row;
+ }
+ .img-fluid{
+     height: fit-content;
+     width: fit-content;
+ }
+ .desc{
+    padding-top: 10px;
+     margin-top: 70px;
+     margin-left: 80px;
+     font-family: 'Poppins', sans-serif;
+ }
+ .desc h2{
+     font-family: 'Poppins', sans-serif;
+   
+     font-variant: normal;
+     font-size: 38px;
+     font-weight: 700;
+     line-height: 50px;
+     
+ }
+ .desc p{
+     font-family: 'Poppins', sans-serif;
+     font-size: 16px;
+     padding-top: 10px;
+ }
+ .desc ul li{
+     list-style-type: none;
+     font-size: 14px;
+     margin-bottom: 15px;
+     padding-top: 5px;
+ }
+ 
+ 
+ @media screen and (max-width: 576px){
+     .maincontent .jumbotron h1{
+         width: 40%;
+         margin-left: 10px;
+         color: white;
+         font-size: 23px;
+         margin-top: 20px;
+     }
+     .maincontent .jumbotron p{
+         width: 40%;
+         margin-left: 10px;
+         color: white;
+         font-size: 10px;
+         font-style: normal;
+         font-family: 'Rubik', sans-serif;  
+     }
+     .maincontent .jumbotron button{
+         width: 180px;
+         height: 65px;
+         left: 817px;
+         top: 309px;
+         padding-left: 15px;
+         border-radius: 15px;
+         background: #FFBA33;
+         box-shadow: 0px 6px 20px rgba(255, 186, 51, 0.4);
+         font-weight: 700;
+         font-size: 20px;
+         border-style: none;
+         font-family:"Rubik", sans-serif;
+         color: #6A4029;
+         margin-left: 10px;
+         margin-top: 25px;
+     }
+     .maincontent .jumbotron{
+         height: 400px;
+         width: 100%;
+         background-image: url("https://github.com/aliefabdussalam/week5/blob/main/landingpage/img/nathan-dumlao-71u2fOofI-U-unsplash%202.png");
+        
+         background-size: cover;
+      
+     }
+     .container-fluid{
+         display: flex;
+         flex-direction: column;
+     }
+     .desc{
+         margin-top: 20px;
+         margin-left: 30px;
+     }
+     .desc h2{
+         font-family: 'Poppins', sans-serif;
+         font-variant: normal;
+         font-size: 19px;
+         font-weight: 700;
+         line-height: 50px;
+         
+     }
+     .desc p{
+         font-family: 'Poppins', sans-serif;
+         font-size: 8px;
+         
+     }
+     .desc ul li{
+         list-style-type: none;
+         font-size: 8px;
+         margin-bottom: 15px;
+        
+     }
+     .mainimg{
+         position: absolute;
+         right: -200px;
+     }
+ }
+ @media screen and (max-width: 768px){
+     .container-fluid{
+         flex-direction: column;
+         margin-bottom: 20px;
+     }
+     .maincontent .jumbotron button{
+         margin-top: 20px;
+     }
+ }
+ 

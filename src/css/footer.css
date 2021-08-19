@@ -1,0 +1,101 @@
+footer{
+    background-color:#F8F8F8;
+    height: auto;
+    display: flex;
+    padding-top: 35px;
+   margin-left: 8px;
+}
+.logo2{
+    
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    
+   
+}
+.logo2 img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.logo2 h1{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    
+}
+.section1 p{
+    
+    margin-left: 45px;
+    font-size: 15px;
+    font-weight: 550;
+    font-family: rubik;
+    color: #4F5665;
+    line-height: 20px;
+}
+
+footer .social{
+    display: flex;
+    margin-left: 35px;
+}
+footer .social img{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition-duration: 55ms;
+}
+footer .social img:hover{
+    transform: scale(1.1);
+}
+footer .since{
+    
+    color: #AFB5C0;
+    font-weight: normal;
+    font-size: 12px;
+}
+footer ol{
+    
+    list-style-type: none;
+}
+footer ol b{
+    font-size: 18px;
+}
+
+footer ol li{
+    font-family: rubik;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #4F5665;
+}
+footer ol li:hover{
+    color: #6a4029;
+    font-weight: 600;
+}
+footer .section3 ol{
+    margin-left: 50px;
+ }
+ .section23{
+    margin-top: -20px;
+     display: flex;
+     flex-direction: row;
+ }
+ @media screen and (max-width: 576px){
+     footer{
+         display: flex;
+         flex-direction: column;
+     }
+     .section23{
+         margin-top: 15px;
+     }
+     .logo2{
+         margin-left: 20px;
+     }
+     .section1 p{
+         margin-left: 20px;
+     }
+     footer .social{
+         margin-left: 20px;
+     }
+ }
