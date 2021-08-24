@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 const NavbarItem = () => {
   return (
-    <div className="navbar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div className="navbar p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white mt-0">
         <div class="logo">
         <img src="https://github.com/aliefabdussalam/week5/blob/main/landingpage/img/coffee%201.png?raw=true" alt=""></img>
             <h1>

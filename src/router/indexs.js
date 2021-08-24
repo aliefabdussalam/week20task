@@ -14,14 +14,18 @@ const Router = () => {
       <Route path="/" exact>
         <Home />
       </Route>
-      <Guard path="/product" component={Product} />
+      <Route path="/product">
+        <Product />
+      </Route>
       <Route path="/login">
         <Login />
       </Route>
       <Route path="/signup">
         <Signup />
       </Route>
-      <Guard path="/detail/:id" component={Details} />
+      <Route path="/details/:id">
+        <Details />
+      </Route>
     </Switch>
   )
 }

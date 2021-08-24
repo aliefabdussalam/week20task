@@ -9,6 +9,9 @@ nav{
   font-family: 'Rubik', sans-serif;
   box-shadow: 1px 1px 10px #CCCCCC;
 }
+.nabar{
+  padding-top: 0px !important;
+}
 .logo{
   width: 30%;
   display: flex;

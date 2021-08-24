@@ -9,7 +9,7 @@ const Home = () => {
                 <NavbarItem />
         
             <main>
-            <div class="maincontent container-fluid">
+            <div class="maincontent container-fluid p-0 m-0">
             <div class="jumbotron">
               <h1>Start Your Day with Coffee and Good Meals</h1>      
               <p>We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</p>
