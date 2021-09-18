@@ -21,14 +21,14 @@ const CardPrd = ({handleDetails}) => {
                     style={{width: '120px', height: '120px'}}
                     alt="Produk"
                 />
-                <div
+                {/* <div
                   className={e.discount === 0 ? 'd-none' : 'discount'}
                 >
                   {e.discount}%
-                </div>
+                </div> */}
                 <div className="card-body mt-lg-5 mt-md-5 mt-4">
                   <p id={e.id} className="col-lg-9 col-md-8 col-12 text-center ms-lg-3 ms-md-4  fw-bold fs-5 mb-5">
-                    {e.name}
+                    {e.product}
                   </p>
                   <span className="fw-bold ms-lg-4 ms-md-4 ms-2">
                     IDR {e.price}

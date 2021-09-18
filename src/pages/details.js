@@ -2,13 +2,17 @@ import { useState } from "react";
 import NavbarItem from "../components/navbar";
 import Footer from "../components/footer";
 import "../css/details.css";
+import axios from "axios";
 
 const Details = () => {
   const data = localStorage.getItem("details");
   const obj = JSON.parse(data);
   const [details] = useState(obj);
 
-  
+const removePrd = () =>{
+    axios.remove('http://localhost:8800/product', { headers: { token: "456" }})
+    .then()
+}  
 
   
 
@@ -37,8 +41,8 @@ const Details = () => {
 
               <div className="col-lg-8 mt-lg-5 mt-5 handleAdd">
                 <div className="btn-group-vertical">
-                  <button type="button" className="btn add">edit</button>
-                  <button type="button" className="btn ask mt-4">delete</button>
+                  <button type="button"  className="btn add">edit</button>
+                  <button type="button" onClick={removePrd} className="btn ask mt-4">delete</button>
                 </div>
               </div>
 

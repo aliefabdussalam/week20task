@@ -5,7 +5,7 @@ import CardPrd from '../components/CardPrd'
 import Footer from "../components/footer";
 import "../css/product.css";
 import axios from "axios";
-
+require('dotenv').config();
 
 export const DataContext = createContext()
 
@@ -43,189 +43,18 @@ const Products = () => {
     },
   ]);
 
-  const data = [
-    {
-      id: "p1",
-      name: "Veggie tomato mix",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%202.png?raw=true",
-      size: ["R","L", "XL"],
-      price: 34000,
-      stock: 20,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo eos dolorum tempora quisquam, expedita aliquam inventore labore consectetur incidunt consequuntur deleniti a facilis voluptatibus assumenda reprehenderit iste perspiciatis! Enim perferendis magnam modi labore, ducimus sapiente officia dicta eos sunt!",
-      discount: 10,
-      category: "foods",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p2",
-      name: "Hazelnut Latte",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%2022.png?raw=true",
-      size: ["R","L", "XL"],
-      price: 25000,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt? Quidem ex eius cum, commodi inventore ab magnam! Hic veritatis velit, quisquam odit, recusandae perferendis eum, tempora omnis quidem repudiandae maxime reiciendis voluptatibus enim nihil mollitia unde pariatur in voluptatum?",
-      stock: 23,
-      discount: 0,
-      category: "Non Coffee",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p3",
-      name: "Summer fried rice",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%202%20(1).png?raw=true",
-      size: ["R","L", "XL"],
-      price: 32000,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt? Quidem ex eius cum, commodi inventore ab magnam! Hic veritatis velit, quisquam odit, recusandae perferendis eum, tempora omnis quidem repudiandae maxime reiciendis voluptatibus enim nihil mollitia unde pariatur in voluptatum?",
-      stock: 12,
-      discount: 13,
-      category: "Foods",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p4",
-      name: "Cold Brew",
-      image:"https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%2022%20(1).png?raw=true",
-      size: ["R","L", "XL"],
-      price: 30000,
-      description: "Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours.",
-      stock: 23,
-      discount: 0,
-      category: "Coffee",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p1",
-      name: "Veggie tomato mix",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%202.png?raw=true",
-      size: ["R","L", "XL"],
-      price: 34000,
-      stock: 20,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo eos dolorum tempora quisquam, expedita aliquam inventore labore consectetur incidunt consequuntur deleniti a facilis voluptatibus assumenda reprehenderit iste perspiciatis! Enim perferendis magnam modi labore, ducimus sapiente officia dicta eos sunt!",
-      discount: 10,
-      category: "foods",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p2",
-      name: "Hazelnut Latte",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%2022.png?raw=true",
-      size: ["R","L", "XL"],
-      price: 25000,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt? Quidem ex eius cum, commodi inventore ab magnam! Hic veritatis velit, quisquam odit, recusandae perferendis eum, tempora omnis quidem repudiandae maxime reiciendis voluptatibus enim nihil mollitia unde pariatur in voluptatum?",
-      stock: 23,
-      discount: 0,
-      category: "Non Coffee",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p3",
-      name: "Summer fried rice",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%202%20(1).png?raw=true",
-      size: ["R","L", "XL"],
-      price: 32000,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt? Quidem ex eius cum, commodi inventore ab magnam! Hic veritatis velit, quisquam odit, recusandae perferendis eum, tempora omnis quidem repudiandae maxime reiciendis voluptatibus enim nihil mollitia unde pariatur in voluptatum?",
-      stock: 12,
-      discount: 13,
-      category: "Foods",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p4",
-      name: "Cold Brew",
-      image:"https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%2022%20(1).png?raw=true",
-      size: ["R","L", "XL"],
-      price: 30000,
-      description: "Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours.",
-      stock: 23,
-      discount: 0,
-      category: "Coffee",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p1",
-      name: "Veggie tomato mix",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%202.png?raw=true",
-      size: ["R","L", "XL"],
-      price: 34000,
-      stock: 20,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo eos dolorum tempora quisquam, expedita aliquam inventore labore consectetur incidunt consequuntur deleniti a facilis voluptatibus assumenda reprehenderit iste perspiciatis! Enim perferendis magnam modi labore, ducimus sapiente officia dicta eos sunt!",
-      discount: 10,
-      category: "foods",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p2",
-      name: "Hazelnut Latte",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%2022.png?raw=true",
-      size: ["R","L", "XL"],
-      price: 25000,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt? Quidem ex eius cum, commodi inventore ab magnam! Hic veritatis velit, quisquam odit, recusandae perferendis eum, tempora omnis quidem repudiandae maxime reiciendis voluptatibus enim nihil mollitia unde pariatur in voluptatum?",
-      stock: 23,
-      discount: 0,
-      category: "Non Coffee",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p3",
-      name: "Summer fried rice",
-      image:
-        "https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%202%20(1).png?raw=true",
-      size: ["R","L", "XL"],
-      price: 32000,
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt? Quidem ex eius cum, commodi inventore ab magnam! Hic veritatis velit, quisquam odit, recusandae perferendis eum, tempora omnis quidem repudiandae maxime reiciendis voluptatibus enim nihil mollitia unde pariatur in voluptatum?",
-      stock: 12,
-      discount: 13,
-      category: "Foods",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
-    {
-      id: "p4",
-      name: "Cold Brew",
-      image:"https://github.com/aliefabdussalam/week5/blob/main/productpage/img/image%2022%20(1).png?raw=true",
-      size: ["R","L", "XL"],
-      price: 30000,
-      description: "Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours.",
-      stock: 23,
-      discount: 0,
-      category: "Coffee",
-      delivery_days: "Monday to Friday",
-      delivery_time: "1 - 3PM",
-    },
+ 
 
-  ]
-
-  const [products, setProducts] = useState(data);
+  const [products, setProducts] = useState([]);
 
   const history = useHistory()
  
-  useEffect(()=> {
-   
-      setProducts(data)
-   
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+ 
   useEffect(()=>{
-    axios.get('http://localhost:8800/product')
+    axios.get('http://localhost:8800/product', { headers: { token: "456" }})
     .then((response)=>{
-      console.log(response.data.data)
+      const data = response.data.data.data
+      setProducts(data);
     }).catch((err)=>{
       console.log(err)
     })
