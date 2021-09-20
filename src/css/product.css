@@ -25,6 +25,10 @@ body {
     border-radius: 20px;
     color: #fff;
 }
+.promo .cardPromo .card{
+    border-radius: 30px;
+    
+}
 
 .product .navProduct .navbar-nav .nav-item {
     font-style: normal;

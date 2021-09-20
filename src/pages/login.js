@@ -17,7 +17,7 @@ const Login = () => {
                   <h1>Coffee Shop</h1>
                     </div>
                     <div class="action-login">
-                    <a> Login </a>
+                    <p> Login </p>
                     </div>
                     </div>
                     <div class="form">
@@ -36,7 +36,7 @@ const Login = () => {
             <div class="d-grid gap-2 col-11 mx-auto">
                 <button class="btn btn-secondary" type="button">Login</button>
                 <button class="btn google btn-secondary" type="button">Login with Google</button>
-                <a class="dont">Don’t have an account?</a>
+                <p class="dont">Don’t have an account?</p>
                 <button class="btn signbtn btn-secondary" type="button">Sign up here</button>
               </div>
                     </section>

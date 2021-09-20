@@ -1,6 +1,9 @@
 import Footer from "../components/footer";
 
 const Signup = () => {
+    const handleChange = (event)=>{
+        this.setState({value: event.target.value});
+      }
     return(
         <div>
         
@@ -16,7 +19,7 @@ const Signup = () => {
                   <h1>Coffee Shop</h1>
                     </div>
                     <div class="action-login">
-                    <a> Sign up </a>
+                    <p> Sign up </p>
                     </div>
                     </div>
                     <div class="form">
@@ -31,12 +34,28 @@ const Signup = () => {
                 <div class="input_email">
                     <h1>Phone Number :</h1>
                     <input class="form-control col-10 mx-auto" type="text" placeholder="Phone Number" aria-label=".form-control-lg example"></input>
-              </div>
+                </div>
+                <div class="input_email">
+                    <h1>Name :</h1>
+                    <input class="form-control col-10 mx-auto" type="text" placeholder="fullname" aria-label=".form-control-lg example"></input>
+                </div>
+                <p> Gender :</p>
+                <select class="form-select form-select-lg mb-3 mt-2" value="gender" onChange={handleChange}>
+                    <option selected>Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <p>Level :</p>
+                <select class="form-select form-select-lg mb-3 mt-2" value="gender" onChange={handleChange}>
+                    <option selected>Select</option>
+                    <option value="1">User</option>
+                    <option value="0">Admin</option>
+                </select>
             </div>
             <div class="d-grid gap-2 col-11 mx-auto">
                 <button class="btn btn-secondary" type="button">Sign up</button>
                 <button class="btn google btn-secondary" type="button">Sign up with Google</button>
-                <a class="dont">Already have an account?</a>
+                <p class="dont">Already have an account?</p>
                 <button class="btn signbtn btn-secondary" type="button">Login here</button>
               </div>
                     </section>

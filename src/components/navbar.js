@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../css/navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -28,10 +28,10 @@ const NavbarItem = () => {
               <Link class="nav-link" to="/product">Product</Link>
             </li> 
             <li class="nav-item">
-              <Link class="nav-link" to="#">Your Cart</Link>
+              <Link class="nav-link" to="/chart">Your Cart</Link>
             </li>
             <li class="nav-item">
-                <Link class="nav-link" href="#">History</Link>
+                <Link class="nav-link" to="#">History</Link>
             </li>
           </ul>
           <div class="secondary-menu">

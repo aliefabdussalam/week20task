@@ -26,6 +26,9 @@ const Router = () => {
       <Route path="/details/:id">
         <Details />
       </Route>
+      <Route path="/transaksi">
+        <Details />
+      </Route>
     </Switch>
   )
 }

@@ -73,7 +73,6 @@ const Products = () => {
   }
 
   
-  
   return (
     <div>
       <div className="navbarProducts border-bottom">
@@ -91,7 +90,7 @@ const Products = () => {
               </div>
               <div className="row d-md-flex flex-md-column d-flex flex-column justify-content-lg-center align-items-lg-center col-lg-10 pt-5 testiCard">                
                 {promo.map((e, i) => (
-                  <div key={i} id={e.id} className="card mb-3 mx-md-2 mx-2 rounded">
+                  <div key={i} id={e.id} className="card mb-3 mx-md-2 mx-2">
                     <div className="row g-0">
                       <div className="col-md-4 col-4">
                         <img
