@@ -78,7 +78,7 @@ body {
 
 .product .prod .card .card-body span,
 .product .note p {
-    color: #6a4029;
+    color: #6a4029 !important;
 }
 
 .footProducts {

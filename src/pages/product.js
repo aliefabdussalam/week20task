@@ -1,10 +1,12 @@
 import { useState, useEffect, createContext } from "react";
-import { useHistory} from "react-router-dom";
 import NavbarItem from "../components/navbar";
 import CardPrd from '../components/CardPrd'
 import Footer from "../components/footer";
 import "../css/product.css";
-import axios from "axios";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { ACTION_GET_ALL_PRODUCT } from "../redux/action/product";
+import { Button, Modal } from "bootstrap";
 require('dotenv').config();
 
 export const DataContext = createContext()
@@ -44,35 +46,17 @@ const Products = () => {
   ]);
 
  
+  const dispatch = useDispatch()
+    const product = useSelector((state) => state.product)
 
-  const [products, setProducts] = useState([]);
+  
 
-  const history = useHistory()
- 
- 
   useEffect(()=>{
-    axios.get('http://localhost:8800/product', { headers: { token: "456" }})
-    .then((response)=>{
-      const data = response.data.data.data
-      setProducts(data);
-    }).catch((err)=>{
-      console.log(err)
-    })
+   dispatch(ACTION_GET_ALL_PRODUCT(product))
+   console.log(product)
   }, [])
-  
 
-  const handleDetails = (id)=>{
-    history.push(`/details/${id}`)
-    // eslint-disable-next-line array-callback-return
-    products.map((e) => {
-      if (e.id === id) {
-        const detailsPoducts = JSON.stringify(e)
-        localStorage.setItem("details", detailsPoducts )
-      }
-    })
-  }
-
-  
+    
   return (
     <div>
       <div className="navbarProducts border-bottom">
@@ -136,9 +120,10 @@ const Products = () => {
             
 
             <div className="container-fluid mt-lg-5 mt-md-5 ms-lg-5 ms-md-0 menuProduct">
+              
               <div className="row itemProduct">
-              <DataContext.Provider value={products}>
-                <CardPrd handleDetails={handleDetails}/>
+              <DataContext.Provider >
+                <CardPrd />
               </DataContext.Provider>
               </div>
               
@@ -150,6 +135,7 @@ const Products = () => {
       <footer className="footProducts">
           <Footer />
       </footer>
+      
     </div>
   );
 };
