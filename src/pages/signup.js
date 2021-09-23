@@ -2,17 +2,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 import { INSERT } from "../redux/action/users";
+import { useHistory } from "react-router";
 
 const Signup = () => {
     const handleChange = (event)=>{
         this.setState({value: event.target.value});
       }
-
+    const history = useHistory()
     const [form, setform] = useState({
-        email:"",
+        emailAddress:"",
         password:"",
-        phoneNumber:"",
-        fullname:"",
+        numberPhone:"",
+        displayName:"",
         gender:"",
         level:"",
     })
@@ -26,16 +27,11 @@ const Signup = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault() 
-        // formdata.append("emailAddress", form.email)
-        // formdata.append("password", form.password)
-        // formdata.append("numberPhone", form.phoneNumber)
-        // formdata.append("displayName", form.fullname)
-        // formdata.append("gender", form.gender)
-        // formdata.append("level", form.level)
-        // console.log(formdata)
          INSERT(form)
         .then((response) => {
-            console.log(response)
+            history.push('/login')
+            alert("registrasi berhasil silahkan login terlebih dahulu")
+            
         }).catch((err) => {
             console.log(err)
         })
@@ -73,8 +69,8 @@ const Signup = () => {
                       onChange={changeInput} 
                       placeholder="Email adress" 
                       aria-label=".form-control-lg example" 
-                      name='email' 
-                      value={form.email}>
+                      name='emailAddress' 
+                      value={form.emailAddress}>
                       </input>
                 </div>
                 <div class="password">
@@ -97,8 +93,8 @@ const Signup = () => {
                     onChange={changeInput} 
                     placeholder="Phone Number" 
                     aria-label=".form-control-lg example" 
-                    name='phoneNumber'
-                    value={form.phoneNumber}>
+                    name='numberPhone'
+                    value={form.numberPhone}>
                     </input>
                 </div>
                 <div class="input_email">
@@ -109,8 +105,8 @@ const Signup = () => {
                     onChange={changeInput} 
                     placeholder="fullname" 
                     aria-label=".form-control-lg example" 
-                    name='fullname' 
-                    value={form.fullname}>
+                    name='displayName' 
+                    value={form.displayName}>
                     </input>
                 </div>
                 <p> Gender :</p>
