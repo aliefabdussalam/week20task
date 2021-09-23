@@ -1,7 +1,19 @@
+import { useState } from "react";
 import Footer from "../components/footer";
 import "../css/login.css";
 
 const Login = () => {
+    const [user, setUser] = useState({
+        email: "",
+        password: "",
+      })
+      
+      const setData=(event)=>{
+        setUser({
+          ...user,
+          [event.target.name]: event.target.value
+        })
+      }
     return(
         <div>
         
@@ -23,11 +35,11 @@ const Login = () => {
                     <div class="form">
                 <div class="input_email">
                       <h1>Email Adress :</h1>
-                      <input class="form-control col-10 mx-auto" type="text" placeholder="Email adress" aria-label=".form-control-lg example"></input>
+                      <input class="form-control col-10 mx-auto" type="text" placeholder="Email adress" aria-label=".form-control-lg example" onChange={setData}></input>
                 </div>
                 <div class="password">
                     <h1>Password :</h1>
-                    <input class="form-control col-10 mx-auto" type="password" placeholder="Enter your password" aria-label=".form-control-lg example"></input>
+                    <input class="form-control col-10 mx-auto" type="password" placeholder="Enter your password" aria-label=".form-control-lg example" onChange={setData}></input>
                 </div>
                 <div class="forgot_password" >
                     <h1 href="">Forgot password?</h1>  
