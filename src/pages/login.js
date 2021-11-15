@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { useHistory } from "react-router";
 import Footer from "../components/footer";
 import "../css/login.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { LOGIN } from "../redux/action/users";
 
 const Login = () => {
@@ -21,9 +20,8 @@ const Login = () => {
       const submitLogin = (e) => {
         e.preventDefault();
         LOGIN(user)
-        .then((response) => {
+         .then((response) => {
           history.push('/product')
-          alert("login berhasil")
           console.log(response)
         }).catch((err) => {
           alert("email/password salah")

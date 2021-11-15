@@ -5,8 +5,10 @@ import Footer from "../components/footer";
 import "../css/product.css";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { ACTION_GET_ALL_PRODUCT } from "../redux/action/product";
+import { ACTION_GET_ALL_PRODUCT,ACTION_GET_SEARCH } from "../redux/action/product";
 import { Button, Modal } from "bootstrap";
+import { useHistory, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 require('dotenv').config();
 
 export const DataContext = createContext()
@@ -48,19 +50,41 @@ const Products = () => {
  
   const dispatch = useDispatch()
     const product = useSelector((state) => state.product)
-
-  
-
+    const history = useHistory()
+    const [search, setSearch] = useState("");
+    const location = useLocation();
+    const query = new URLSearchParams(location.search);
+    const nameSearch = query.get("search");
+    const changeSearch=(event)=>{
+      setSearch(event.target.value)
+    }
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      history.push(`/product?search=${search}`);
+      setSearch("");
+    };
+    
   useEffect(()=>{
    dispatch(ACTION_GET_ALL_PRODUCT(product))
    console.log(product)
   }, [])
+  useEffect(() => {
+    console.log(nameSearch)
+    if (nameSearch && nameSearch !== "") {
+      dispatch(ACTION_GET_SEARCH(nameSearch))
+    } else {
+      dispatch(ACTION_GET_ALL_PRODUCT())
+    }
 
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [nameSearch]);
+  const handleDetails = (id)=>{
+    history.push(`/details/${id}`)
+  }
   return (
     <div>
       <div className="navbarProducts border-bottom">
-        <NavbarItem />
+        <NavbarItem isLogin={'true'}/>
       </div>
       <section className="container-fluid promo">
         <div className="row">
@@ -117,17 +141,20 @@ const Products = () => {
           </div>
 
           <div className="col-lg-7 col-md-12 product">
-            
+          <form onSubmit={handleSubmit} className='d-flex justify-content-center'>
+                        <input type="text" onChange={changeSearch} value={search} name="search" placeholder="Cari Product" className='form-control w-75 me-2 mt-3'/>
+                        <button type="submit" className='btn btn-success'>Search</button>
+                    </form>
 
-            <div className="container-fluid mt-lg-5 mt-md-5 ms-lg-5 ms-md-0 menuProduct">
-              
+            <div className="container-fluid mt-lg-5 mt-md-5 ms-lg-5 ms-md-0 menuProduct">        
               <div className="row itemProduct">
               <DataContext.Provider >
-                <CardPrd />
+                <CardPrd  handleDetails={handleDetails}/>
               </DataContext.Provider>
               </div>
               
             </div>
+            <Link to='/add'><button className="btn btn signbtn btn-secondary col-12">Add Product</button></Link>
           </div>
         </div>
       </section>

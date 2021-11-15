@@ -17,8 +17,8 @@ const CardPrd = ({handleDetails}) => {
               <div
                 className="card bg-white border-0 shadow-lg rounded"
                 style={{width: '156px', height: '215px'}}
-               
-              ><p>http://localhost:8800/upload/{e.image}</p>
+                onClick={()=> handleDetails(e.id)}
+              >
               <img
                 src={`http://localhost:8800/upload/${e.image}`}
                     className="card-img-top rounded-circle position-absolute ms-3"

@@ -18,16 +18,15 @@ export const INSERT = (formdata) => {
 
 export const LOGIN = (user) => {
     console.log(user)
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => { 
         const {header} = {
             'Content-Type': 'application/json'
         }
         axios.post(`http://localhost:8800/login`, user, {header})
-        .then((response) => {
+        .then((response) => { 
             const token = response.data.data
-            console.log(response)
             localStorage.setItem("token", token)
-            
+            resolve(response)
         }).catch((err) => {
             reject(err)
         })

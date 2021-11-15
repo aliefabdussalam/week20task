@@ -7,6 +7,8 @@ import Signup from '../pages/signup'
 import Details from '../pages/details'
 
 import Guard from './Guard'
+import Add from '../pages/add'
+import Edit from '../pages/editprd'
 
 const Router = () => {
   return (
@@ -14,18 +16,16 @@ const Router = () => {
       <Route path="/" exact>
         <Home />
       </Route>
-      <Route path="/product">
-        <Product />
-      </Route>
+      <Guard path="/product" component={Product} />
       <Route path="/login">
         <Login />
       </Route>
       <Route path="/signup">
         <Signup />
       </Route>
-      <Route path="/details/:id">
-        <Details />
-      </Route>
+      <Guard path="/details/:id" component={Details} />
+      <Guard path="/edit/:id" component={Edit} />
+      <Guard path="/add" component={Add} />
       <Route path="/transaksi">
         <Details />
       </Route>
