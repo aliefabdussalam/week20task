@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+### landing page
+Landing page berfungsi sebagai halaman beranda dalam website ini dan terdiri atas 3 komponen utama yaitu navbar, content, footer 
+pada komponen content terdapat jumbotron dan beberapa deskripsi singkat tentang coffee shop. dan berikut adalah preview dari landing page :
+![desktop](https://github.com/aliefabdussalam/week5/blob/main/preview/landingpage%20desktop.PNG)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+mobile version
 
-## Available Scripts
+![mobile](https://github.com/aliefabdussalam/week5/blob/main/preview/landingpage%20mobile.PNG)
 
-In the project directory, you can run:
+tablet version
 
-### `npm start`
+![tablet](https://github.com/aliefabdussalam/week5/blob/main/preview/landingpage%20tablet.PNG)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### sign up page
+sign up page berfungsi sebagai halaman pembuatan akun baru. terdiri atas 3 komponen utama yaitu img, form, footer pada komponen form terdapat tiga form dan tiga button.
+dan berikut adalah preview dari sign up page :
+![desktop](https://github.com/aliefabdussalam/week5/blob/main/preview/signup%20desktop.PNG)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+mobile version
 
-### `npm test`
+![mobile](https://github.com/aliefabdussalam/week5/blob/main/preview/signup%20mobile.PNG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+tablet version
 
-### `npm run build`
+![tablet](https://github.com/aliefabdussalam/week5/blob/main/preview/signup%20tablet.PNG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### login page
+login page berfungsi sebagai halaman login untuk yang sudah memiliki akun. terdiri atas 3 komponen utama yaitu img, form, footer pada komponen form terdapat dua form dan tiga button. dan berikut adalah preview dari login page :
+![desktop](https://github.com/aliefabdussalam/week5/blob/main/preview/login%20desktop.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+mobile version
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![desktop](https://github.com/aliefabdussalam/week5/blob/main/preview/login%20mobile.PNG)
 
-### `npm run eject`
+tablet version
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![desktop](https://github.com/aliefabdussalam/week5/blob/main/preview/login%20tablet.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### product page
+product page berfungsi sebagai halaman utama dimana customer memilih product. dalam halaman ini terdapat semua pilihan product beserta promo yang sedang berlaku.
+dan berikut adalah preview dari product :
+![desktop](https://github.com/aliefabdussalam/week5/blob/main/preview/product%20desktop.PNG)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+mobile version
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![mobile](https://github.com/aliefabdussalam/week5/blob/main/preview/product%20mobile.PNG)
 
-## Learn More
+tablet version
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![tablet](https://github.com/aliefabdussalam/week5/blob/main/preview/product%20tablet.PNG)
