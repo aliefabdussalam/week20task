@@ -1,3 +1,9 @@
+## coffee shop app
+aplikasi ini merupakan aplikasi perpesanan untuk cafe yang dibangun dengan react js serta menggunakan bootstrap untuk layout website
+
+untuk backend bisa di klik di [sini](https://github.com/aliefabdussalam/week19)
+dan untuk mencoba website ii bisa di klik di [sini](https://week20task.vercel.app/)
+
 ### landing page
 Landing page berfungsi sebagai halaman beranda dalam website ini dan terdiri atas 3 komponen utama yaitu navbar, content, footer 
 pada komponen content terdapat jumbotron dan beberapa deskripsi singkat tentang coffee shop. dan berikut adalah preview dari landing page :
