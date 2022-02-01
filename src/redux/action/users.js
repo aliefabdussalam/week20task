@@ -1,4 +1,5 @@
 import axios from "axios";
+require('dotenv').config();
 
 export const INSERT = (formdata) => {
     console.log(formdata)
@@ -6,7 +7,7 @@ export const INSERT = (formdata) => {
         const {header} = {
             'Content-Type': 'application/json'
         }
-        axios.post(`http://localhost:8800/register`, formdata, {header})
+        axios.post(`${process.env.REACT_APP_API_URL}/register`, formdata, {header})
         .then((response) => {
             console.log(response.data)
             resolve(response.data)
@@ -22,7 +23,7 @@ export const LOGIN = (user) => {
         const {header} = {
             'Content-Type': 'application/json'
         }
-        axios.post(`http://localhost:8800/login`, user, {header})
+        axios.post(`${process.env.REACT_APP_API_URL}/login`, user, {header})
         .then((response) => { 
             const token = response.data.data
             localStorage.setItem("token", token)
