@@ -1,4 +1,5 @@
 import axios from "axios";
+require('dotenv').config();
 
 export const ACTION_GET_ALL_PRODUCT = () => {
     const token = localStorage.getItem('token')
@@ -7,7 +8,7 @@ export const ACTION_GET_ALL_PRODUCT = () => {
     }
     return (dispatch) => {
         dispatch(allProductPending())
-        axios.get('http://localhost:8800/product', { headers }).then((response) => {
+        axios.get(`${process.env.REACT_APP_API_URL}/product`, { headers }).then((response) => {
             dispatch(allProductFullfiled(response.data.data.data))
         }).catch((err) => {
             dispatch(allProductRejected())

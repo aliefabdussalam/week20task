@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { Link } from "react-router-dom";
 import { DataContext } from "../pages/product"
 import { ACTION_GET_ALL_PRODUCT, deletePrd } from "../redux/action/product";
-
+require('dotenv').config();
 const CardPrd = ({handleDetails}) => {
     
     const product = useSelector((state) => state.product.all)
@@ -20,7 +20,7 @@ const CardPrd = ({handleDetails}) => {
                 onClick={()=> handleDetails(e.id)}
               >
               <img
-                src={`http://localhost:8800/upload/${e.image}`}
+                src={`${process.env.REACT_APP_API_URL}/upload/${e.image}`}
                     className="card-img-top rounded-circle position-absolute ms-3"
                     style={{width: '120px', height: '120px'}}
                     alt="Produk"
