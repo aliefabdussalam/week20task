@@ -74,7 +74,7 @@ const Login = () => {
                     <h1 href="">Forgot password?</h1>  
                 </div>
             </form>
-            <div class="d-grid gap-2 col-11 mx-auto">
+            <div class="d-grid gap-2 col-11 mx-auto buttonlog">
                 <button class="btn btn-secondary" type="button" onClick={submitLogin}>Login</button>
                 <button class="btn google btn-secondary" type="button">Login with Google</button>
                 <p class="dont">Don’t have an account?</p>

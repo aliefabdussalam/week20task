@@ -57,7 +57,7 @@ const NavbarItem = ({isLogin}) =>{
                                             <Link className='text-decoration-none text-dark me-3' to ='/login'>Login</Link>
                                     </NavItem>
                                     <NavItem>
-                                            <Link className='btn text-dark cursor rounded-pill bgyellow ' to ='/register'>SignUp</Link>
+                                            <Link className='btn text-dark cursor rounded-pill bgyellow ' to ='/signup'>SignUp</Link>
                                     </NavItem> 
                                 </div>
                             ):(
